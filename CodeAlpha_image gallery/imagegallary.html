@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Albums</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Albums</h1>
+  <div class="albums">
+    <div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('animals')">Animals</button>
+  <button onclick="filterImages('birds')">Birds</button>
+</div>
+
+    <div class="album" onclick="showFolder('recents')">
+        
+      <img src="https://tse4.mm.bing.net/th/id/OIP.mMWuzEPKzws6n-oi_7pAyQHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Recents">
+      <div class="album-info">
+        <span class="name">Recents</span>
+      </div>
+    </div>
+
+    <div class="album" onclick="showFolder('camera')">
+    <img src="https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg" alt="Camera">
+      <div class="album-info">
+        <span class="name">Camera</span>
+      </div>
+    </div>
+
+    <div class="album" onclick="showFolder('whatsapp')">
+        <img src="https://th.bing.com/th/id/OIP.qLc7CKA1SnBvANPyTe5zeAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="WhatsApp">
+      <div class="album-info">
+        <span class="name">WhatsApp</span>
+      </div>
+    </div>
+
+    <div class="album" onclick="showFolder('snapchat')">
+
+      <img src="https://tse3.mm.bing.net/th/id/OIP.GwK0KVnRtgeYaKCKA9QNRQHaEK" alt="Snapchat">
+      <div class="album-info">
+        <span class="name">Snapchat</span>
+      </div>
+    </div>
+  </div>
+  <div id="recents" class="gallary" style="display:none;">
+    <button class="back-btn" onclick="showAlbums()">← Back to Albums</button>
+    <img src="https://tse4.mm.bing.net/th/id/OIP.mMWuzEPKzws6n-oi_7pAyQHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" onclick="openImg(this)">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.LLay-3EExNcHIHiGw3aRMQHaLI?rs=1&pid=ImgDetMain&o=7&rm=3" onclick="openImg(this)">
+    <img src="https://th.bing.com/th/id/OIP.Oj6PQkQUsy0ZliPuU3lczgHaEo?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" onclick="openImg(this)">
+    <img src="https://th.bing.com/th/id/OIP.SXi2GmLU_iXGR6JZXE150wHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" onclick="openImg(this)">
+    <img src="https://pix.avax.news/avaxnews/77/2a/00012a77.jpeg" onclick="openImg(this)">
+    <!-- Extra Nature images -->
+<img class="nature" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" onclick="openImg(this)">
+<img class="nature" src="https://images.pexels.com/photos/34950/pexels-photo.jpg" onclick="openImg(this)">
+<img class="nature" src="https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg" onclick="openImg(this)">
+
+<!-- Extra Bird images -->
+<img class="birds" src="https://images.pexels.com/photos/349758/hummingbird-bird-birds-349758.jpeg" onclick="openImg(this)">
+<img class="birds" src="https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg" onclick="openImg(this)">
+<img class="birds" src="https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg" onclick="openImg(this)">
+
+  </div>
+
+  <div id="camera" class="gallary" style="display:none;">
+    <button class="back-btn" onclick="showAlbums()">← Back to Albums</button>
+    <img src="https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg" onclick="openImg(this)">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.Q8EDjRv3u8lahs0vHoTkHwHaEo" onclick="openImg(this)">
+    <!-- Animal images -->
+<img class="animals" src="https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg" onclick="openImg(this)">
+<img class="animals" src="https://images.pexels.com/photos/47547/squirrel-animal-cute-rodents-47547.jpeg" onclick="openImg(this)">
+<img class="animals" src="https://images.pexels.com/photos/33392/portrait-bird-nature-wild.jpg" onclick="openImg(this)">
+<img class="animals" src="https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg" onclick="openImg(this)">
+<img class="animals" src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg" onclick="openImg(this)">
+
+<!-- Nature images -->
+<img class="nature" src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg" onclick="openImg(this)">
+<img class="nature" src="https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg" onclick="openImg(this)">
+<img class="nature" src="https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg" onclick="openImg(this)">
+<img class="nature" src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" onclick="openImg(this)">
+<img class="nature" src="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg" onclick="openImg(this)">
+
+  </div>
+
+  <div id="whatsapp" class="gallary" style="display:none;">
+    <button class="back-btn" onclick="showAlbums()">← Back to Albums</button>
+    <img src="https://th.bing.com/th/id/OIP.qLc7CKA1SnBvANPyTe5zeAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" onclick="openImg(this)">
+    <img src="https://s7d2.scene7.com/is/image/PetSmart/ARFEAT-SoYouWantABirdThatsRightForYou-20160818?$LC0302$" onclick="openImg(this)">
+    <img src="https://s-media-cache-ak0.pinimg.com/736x/36/66/76/3666764312573a54adef888747d0c8f3.jpg" onclick="openImg(this)">
+    <!-- Nature images -->
+<img class="nature" src="https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg" onclick="openImg(this)">
+<img class="nature" src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg" onclick="openImg(this)">
+<img class="nature" src="https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg" onclick="openImg(this)">
+
+<!-- Animal images -->
+<img class="animals" src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" onclick="openImg(this)">
+<img class="animals" src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg" onclick="openImg(this)">
+<img class="animals" src="https://images.pexels.com/photos/458799/pexels-photo-458799.jpeg" onclick="openImg(this)">
+<img class="animals" src="https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg" onclick="openImg(this)">
+
+  </div>
+
+  <div id="snapchat" class="gallary" style="display:none;">
+    <button class="back-btn" onclick="showAlbums()">← Back to Albums</button>
+    <img src="https://tse3.mm.bing.net/th/id/OIP.GwK0KVnRtgeYaKCKA9QNRQHaEK" onclick="openImg(this)">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.Q8EDjRv3u8lahs0vHoTkHwHaEo" onclick="openImg(this)">
+    <img src="https://s-media-cache-ak0.pinimg.com/736x/36/66/76/3666764312573a54adef888747d0c8f3.jpg" onclick="openImg(this)">
+    <img src="https://th.bing.com/th/id/R.90a632133fa78c32fde3132880d12c68?rik=ABd%2b5zstI%2bo%2bJA&riu=http%3a%2f%2f4.bp.blogspot.com%2f_LDF9z4ZzZHo%2fTQZPzB2h_TI%2fAAAAAAAAAkA%2ftMyV8AJvBGI%2fs1600%2fWebshots_59014.jpg&ehk=wuAca78%2buePYTXHBGtL5o7sMFwFhSTKStDUEw6aZFgY%3d&risl=&pid=ImgRaw&r=0" onclick="openImg(this)">
+    <img class="nature" src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" onclick="openImg(this)">
+    <img class="nature" src="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg" onclick="openImg(this)">
+    <img class="nature" src="https://images.pexels.com/photos/34950/pexels-photo.jpg" onclick="openImg(this)">
+
+  </div>
+  <div id="lightbox" onclick="closeImg()">
+    <img id="lightbox-img">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
